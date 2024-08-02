@@ -76,9 +76,7 @@ The analysis revealed key insights into the factors influencing arrests during p
 
 
 
-## Racial-Profiling-and-Bias-Detection-in-Minneapolis
-
-## Racial Biased Police Project Report
+# Racial-Profiling-and-Bias-Detection-in-Minneapolis
 
 
 ### Project Objective
