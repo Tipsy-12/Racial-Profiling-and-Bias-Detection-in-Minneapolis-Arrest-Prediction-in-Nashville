@@ -1,4 +1,4 @@
-# Racial-Profiling-and-Bias-Detection-in-Minneapolis-Arrest-Prediction-in-Nashville
+# Arrest-Prediction-in-Nashville
 
 
 ### Project Overview
@@ -73,4 +73,111 @@ The results were interpreted to understand which factors were most predictive of
 
 ### Summary of Findings
 The analysis revealed key insights into the factors influencing arrests during police stops. The models showed reasonable accuracy in predicting arrests based on the provided features.
+
+
+
+## Racial-Profiling-and-Bias-Detection-in-Minneapolis
+
+## Racial Biased Police Project Report
+
+
+### Project Objective
+
+The objective of this project is to analyze racial bias in police interactions and violence in Minneapolis. The study aims to identify patterns and trends that may indicate discriminatory practices based on race.
+
+### Data Description
+
+The dataset contains records of police interactions, including variables such as race, gender, age, outcome of the interaction, and instances of violence. The key variables include:
+
+- **Race**: The race of the individual involved in the police interaction.
+- **Gender**: The gender of the individual.
+- **Age**: The age of the individual.
+- **Interaction Outcome**: The result of the police interaction (e.g., arrest, warning, no action).
+- **Violence**: Whether violence was used during the interaction (yes/no).
+
+### Data Preprocessing
+
+#### Handling Missing Values
+
+- **Race**: Missing values were imputed using the most frequent category.
+- **Gender**: Missing values were handled by creating a separate category for missing values.
+- **Age**: Missing values were replaced with the median age.
+- **Interaction Outcome**: Missing values were imputed with the most common outcome.
+- **Violence**: Missing values were treated as a separate category.
+
+#### Data Transformation
+
+- **Categorical Variables**: Encoded using one-hot encoding.
+- **Continuous Variables**: Standardized to have a mean of 0 and a standard deviation of 1.
+
+### Exploratory Data Analysis
+
+#### Distribution of Variables
+
+- **Race Distribution**: Analysis of the racial composition in police interactions.
+- **Gender Distribution**: Analysis of gender representation.
+- **Age Distribution**: Age distribution across different racial groups.
+- **Interaction Outcome Distribution**: Frequency of different outcomes.
+
+#### Visualizations
+
+1. **Race vs. Interaction Outcome**:
+   - Visualization showing the outcome distribution for different racial groups.
+   
+2. **Gender vs. Interaction Outcome**:
+   - Visualization showing the outcome distribution for different genders.
+
+3. **Age vs. Violence**:
+   - Visualization showing the age distribution where violence was used.
+
+4. **Race vs. Violence**:
+   - Visualization highlighting the instances of violence across different racial groups.
+
+### Statistical Analysis
+
+#### Chi-Square Test of Independence
+
+Performed at a 5% level of significance to determine the dependency between variables:
+
+- **Race and Interaction Outcome**: Dependent
+- **Race and Violence**: Dependent
+- **Gender and Interaction Outcome**: Independent
+- **Age and Violence**: Dependent
+
+### Model Building
+
+#### Classification Models
+
+Several classification models were trained to predict the likelihood of violence in police interactions based on the given features. The models include:
+
+- **Logistic Regression**
+- **Naïve Bayes**
+- **Support Vector Machine (SVM)**
+- **Decision Tree**
+- **Random Forest**
+- **K-Nearest Neighbors (KNN)**
+- **Gradient Boosting**
+
+#### Model Performance
+
+The models were evaluated based on accuracy, precision, recall, and F1-score. The dataset was split into training (80%) and testing (20%) sets. The key findings are:
+
+- **Logistic Regression**: Accuracy - 78%
+- **Naïve Bayes**: Accuracy - 75%
+- **SVM**: Accuracy - 76%
+- **Decision Tree**: Accuracy - 70%
+- **Random Forest**: Accuracy - 80%
+- **KNN**: Accuracy - 74%
+- **Gradient Boosting**: Accuracy - 82%
+
+### Key Findings
+
+- **Racial Disparities**: Significant racial disparities were observed in the outcomes of police interactions, with minority groups more likely to experience adverse outcomes.
+- **Gender Influence**: Gender did not strongly depend on the outcome of interactions.
+- **Age Factor**: Younger individuals were more likely to experience violence during interactions.
+- **Model Insights**: Gradient Boosting provided the best predictive performance, suggesting non-linear relationships between features and the likelihood of violence.
+
+### Conclusion
+
+The analysis highlights the presence of racial bias in police interactions in Minneapolis. The findings suggest a need for policy reforms and further training for police officers to address these disparities. Future work could involve more detailed temporal analysis and the inclusion of additional contextual variables.
 
