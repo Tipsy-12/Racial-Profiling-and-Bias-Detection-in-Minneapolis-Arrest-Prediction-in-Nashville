@@ -95,7 +95,9 @@ Weighted Average: Precision: 0.99, Recall: 0.99, F1-score: 0.99
 3. Overall Accuracy: Both models achieve high accuracy (0.99) and identical weighted averages, indicating strong performance, especially for the majority class.
 
 4. Conclusion
+
 Recommendation: Use the Random Forest model if the goal is to improve True class detection, as it has a better recall and F1-score for True instances. If precision is more critical, further tuning or alternative methods may be needed.
+
 Next Steps: Optimize hyperparameters for Random Forest, consider other models or ensemble methods, and analyze specific errors to enhance performance.
 
 
