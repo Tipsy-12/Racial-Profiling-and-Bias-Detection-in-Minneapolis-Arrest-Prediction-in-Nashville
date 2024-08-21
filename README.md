@@ -88,10 +88,13 @@ Macro Average: Precision: 0.92, Recall: 0.74, F1-score: 0.80
 Weighted Average: Precision: 0.99, Recall: 0.99, F1-score: 0.99
 
 ### Comparison
-False Class: Both models perform equally well, with perfect recall and near-perfect precision.
-True Class: Random Forest shows a slight improvement in recall (0.48 vs. 0.45) and F1-score (0.61 vs. 0.59) compared to Logistic Regression, though with slightly lower precision (0.84 vs. 0.85).
-Overall Accuracy: Both models achieve high accuracy (0.99) and identical weighted averages, indicating strong performance, especially for the majority class.
-Conclusion
+1. False Class: Both models perform equally well, with perfect recall and near-perfect precision.
+
+2. True Class: Random Forest shows a slight improvement in recall (0.48 vs. 0.45) and F1-score (0.61 vs. 0.59) compared to Logistic Regression, though with slightly lower precision (0.84 vs. 0.85).
+   
+3. Overall Accuracy: Both models achieve high accuracy (0.99) and identical weighted averages, indicating strong performance, especially for the majority class.
+
+4. Conclusion
 Recommendation: Use the Random Forest model if the goal is to improve True class detection, as it has a better recall and F1-score for True instances. If precision is more critical, further tuning or alternative methods may be needed.
 Next Steps: Optimize hyperparameters for Random Forest, consider other models or ensemble methods, and analyze specific errors to enhance performance.
 
