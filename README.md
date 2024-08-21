@@ -34,22 +34,6 @@ New features were created, and existing features were transformed to enhance mod
 ### Column Details
 Raw columns were dropped to avoid clutter and focus on processed columns. Object data types were investigated to determine if they were categorical or another form, and sparse data was filled where necessary.
 
-## Exploratory Data Analysis (EDA)
-
-### Summary Statistics
-Summary statistics provided an overview of the dataset, including counts, means, and standard deviations for numeric columns, and counts for categorical columns.
-
-### Data Visualizations
-Data visualizations helped in understanding the distributions and relationships between variables. For example, histograms, bar charts, and box plots were used to visualize the distribution of stop times, subject races, and arrest rates.
-
-## Chi-Square Test of Independence
-
-### Hypothesis Testing
-The Chi-square test was used to determine if there was a significant association between categorical variables. For example, it tested the independence between `subject_race` and `arrest_made`.
-
-### Results and Interpretation
-Results indicated whether there were significant dependencies between variables. P-values less than 0.05 were considered significant, indicating a relationship between the tested variables.
-
 ## Modeling
 
 ### Data Split
@@ -63,16 +47,53 @@ Accuracy and other performance metrics were used to evaluate the models. For ins
 
 ## Model Interpretation
 
-### Coefficients and Feature Importance
-For models like Logistic Regression, coefficients were analyzed to understand the impact of each feature. For tree-based models, feature importance scores highlighted the most influential variables.
+### 1. Logistic Regression Model:
 
-### Interpretation of Results
-The results were interpreted to understand which factors were most predictive of arrests. For example, the race of the subject and the time of day were significant predictors.
+False Class:
 
-## Conclusion
+Precision: 0.99
+Recall: 1.00
+F1-score: 0.99
+Support: 256,533
+True Class:
 
-### Summary of Findings
-The analysis revealed key insights into the factors influencing arrests during police stops. The models showed reasonable accuracy in predicting arrests based on the provided features.
+Precision: 0.85
+Recall: 0.45
+F1-score: 0.59
+Support: 4,377
+Overall Metrics:
+
+Accuracy: 0.99
+Macro Average: Precision: 0.92, Recall: 0.72, F1-score: 0.79
+Weighted Average: Precision: 0.99, Recall: 0.99, F1-score: 0.99
+
+### 2. Random Forest Model:
+
+False Class:
+
+Precision: 0.99
+Recall: 1.00
+F1-score: 0.99
+Support: 256,533
+True Class:
+
+Precision: 0.84
+Recall: 0.48
+F1-score: 0.61
+Support: 4,377
+Overall Metrics:
+
+Accuracy: 0.99
+Macro Average: Precision: 0.92, Recall: 0.74, F1-score: 0.80
+Weighted Average: Precision: 0.99, Recall: 0.99, F1-score: 0.99
+
+### Comparison
+False Class: Both models perform equally well, with perfect recall and near-perfect precision.
+True Class: Random Forest shows a slight improvement in recall (0.48 vs. 0.45) and F1-score (0.61 vs. 0.59) compared to Logistic Regression, though with slightly lower precision (0.84 vs. 0.85).
+Overall Accuracy: Both models achieve high accuracy (0.99) and identical weighted averages, indicating strong performance, especially for the majority class.
+Conclusion
+Recommendation: Use the Random Forest model if the goal is to improve True class detection, as it has a better recall and F1-score for True instances. If precision is more critical, further tuning or alternative methods may be needed.
+Next Steps: Optimize hyperparameters for Random Forest, consider other models or ensemble methods, and analyze specific errors to enhance performance.
 
 
 
